@@ -25,6 +25,12 @@ public class Main {
         computer.copy();
 
 
+        /* FactoryMethod test*/
 
+        Watch watch = new RomeWatch();
+        watch.showTime();
+        WatchMaker maker = new DigitalWatchMaker();// new RomeWatchMaker();
+        Watch watch1 = maker.createWatch();
+        watch1.showTime();
     }
 }
